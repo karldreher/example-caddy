@@ -1,0 +1,18 @@
+0.0.0.0, localhost {
+  # Enable automatic HTTPS for localhost
+  tls internal
+
+  handle_path "/gin/*"{
+    # Proxy requests to the backend server "example-gin"
+    reverse_proxy example-gin:8080
+  }
+
+  handle "/internal"{
+    respond "{'message': 'Hello World from Caddy!', 'status': 'success'}" 
+  }
+
+  handle "/healthz"{
+    respond 200
+  }
+
+}

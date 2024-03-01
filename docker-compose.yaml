@@ -14,8 +14,8 @@ services:
     ports:
       - 8080
   
-  caddy:
-    image: caddy:latest
+  caddy-service:
+    image: caddy-service:latest
     build:
       dockerfile: Dockerfile
       context: ./caddy

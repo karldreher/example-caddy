@@ -4,13 +4,9 @@ FROM caddy:latest
 # Copy the Caddyfile into the container
 COPY Caddyfile /etc/caddy/Caddyfile
 
-
 # Set the working directory to /srv
 WORKDIR /srv
-
-# Add your website content to the /srv directory
-# For example, if you have an index.html file, you can add it like this:
-# COPY index.html /srv/
+COPY index.html .
 
 # Expose port 80 (HTTP) and 443 (HTTPS)
 EXPOSE 80 443

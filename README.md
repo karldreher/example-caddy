@@ -18,3 +18,4 @@ There are a couple of simple behaviors of the Caddy server that are configured.
         - `/api/v1/time` - Return current system time. 
 - `https://localhost/internal` - Provide a static response *from Caddy*
 - `https://localhost/healthz` - Healthcheck for the Caddy service, configured as such in the docker-compose.yaml.
+- `https://localhost/static/` - a static file (index.html) served by Caddy.
